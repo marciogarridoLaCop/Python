@@ -11,5 +11,8 @@ class Calculadora:
         return self.__area_teto
 
     def calcular_litragem_necessaria(self):
+        if self.__area_paredes <= 0 or self.__area_teto <= 0:
+            print("O valor informado é inválido")
+            exit()
         return(self.__area_paredes + self.__area_teto) / 10
 
